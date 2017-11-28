@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Shader {
 	
-	public static int compileShader(int shaderType, String shaderCode) {
+	public static int compileShader(int shaderType, String shaderCode, String shaderIdent) {
 		int shader = glCreateShader(shaderType);
 		
         glShaderSource(shader, shaderCode);
@@ -16,7 +16,7 @@ public class Shader {
 		int status = glGetShaderi(shader, GL_COMPILE_STATUS);
 		if (status == GL_FALSE) {
     		System.out.println(glGetShaderInfoLog(shader, 500));
-    		System.err.println("Could not compile shader");
+    		System.err.println("Could not compile shader, " + shaderIdent);
 			glDeleteShader(shader);
 		}      
 		

@@ -1,4 +1,4 @@
-#version 330
+#version 330 core
 
 layout(location = 0) in vec3 position;
 
@@ -21,8 +21,8 @@ void main(void){
 	if (useSubTex == 1) {
 		addX = subTexCor.x / imageDim;
 		addY = subTexCor.y / imageDim;
-		width = (imageDim * 2f) / subTexDim.x;
-		height = (imageDim * 2f) / subTexDim.y;
+		width = (imageDim * 2.0) / subTexDim.x;
+		height = (imageDim * 2.0) / subTexDim.y;
 	}
 	
 	textureCoords = vec2(addX + ((position.x + 1) / width), addY + ((position.y - 1) / -height));

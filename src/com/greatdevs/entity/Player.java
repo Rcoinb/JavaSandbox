@@ -102,7 +102,7 @@ public class Player {
 		}	
 		
 		if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) && Mouse.isGrabbed()){
-			addToPos = Maths.multVec(addToPos, 24f);
+			//addToPos = Maths.multVec(addToPos, 24f);
 		}
 		
 		if (Keyboard.isKeyDown(Keyboard.KEY_SPACE) && Mouse.isGrabbed()){

@@ -27,7 +27,7 @@ public class DisplayManager {
 	public static int HEIGHT = 9;
 	public static int SCALE = 100;
 
-	public static int FPS_CAP = 2048;
+	public static int FPS_CAP = 200;
 	
 	public static void createWindow(String title) {	
 		try {
@@ -45,6 +45,10 @@ public class DisplayManager {
 			Mouse.create();
 			Controllers.create();
 			
+			System.out.println("OS name " + System.getProperty("os.name"));
+		    System.out.println("OS version " + System.getProperty("os.version"));
+		    System.out.println("LWJGL version " + org.lwjgl.Sys.getVersion());
+		    System.out.println("OpenGL version " + glGetString(GL_VERSION));
 			System.out.println("Found " + Controllers.getControllerCount() + " controllers");
 			System.out.println("Mouse has " + Mouse.getButtonCount() + " button(s).");
 			System.out.println("Keyboard has " + Keyboard.getKeyCount() + " key(s).");

@@ -27,7 +27,7 @@ public class Framework {
         String filepath = Framework.findFileOrThrow( shaderFilename );
         String shaderCode = loadShaderFile( filepath );
 
-        return Shader.compileShader( shaderType, shaderCode );
+        return Shader.compileShader(shaderType, shaderCode, shaderFilename);
     }
 
 
